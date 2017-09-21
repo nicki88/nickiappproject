@@ -1,17 +1,45 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title>
+      Coffee Training Centre
+    </ion-title>
   </ion-navbar>
 </ion-header>
-
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content class="card-background-page">
+
+  <ion-card>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH9xynltIEYDGTKP7D_Cfvyg4cZDbSkNWBv5ieWl0k9UJ56rhn"/>
+    <div class="card-title">Latte Art Workshop 1 day</div>
+    <div class="card-subtitle"><button ion-button (click)=review()>50 Review</button></div>
+  </ion-card>
+
+  <ion-card>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH9xynltIEYDGTKP7D_Cfvyg4cZDbSkNWBv5ieWl0k9UJ56rhn"/>
+    <div class="card-title">Latte Art Workshop 2 day</div>
+    <div class="card-subtitle"><button ion-button (click)=review()>20 Review</button></div>
+  </ion-card>
+
+  <ion-card>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH9xynltIEYDGTKP7D_Cfvyg4cZDbSkNWBv5ieWl0k9UJ56rhn"/>
+    <div class="card-title">Latte Art Workshop 3 day</div>
+    <div class="card-subtitle"><button ion-button (click)=review()>50 Review</button></div>
+  </ion-card>
+
+  <ion-card>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH9xynltIEYDGTKP7D_Cfvyg4cZDbSkNWBv5ieWl0k9UJ56rhn"/>
+    <div class="card-title">Basic Barista Training</div>
+    <div class="card-subtitle"><button ion-button (click)=review()>72 Review</button></div>
+  </ion-card>
+
+
+
+
+  <button ion-button (click)=press()>Register now</button>
 </ion-content>
+
+
+
