@@ -10,8 +10,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import  { GoogleMaps} from '@ionic-native/google-maps';
 import  { FindusPage} from '../pages/findus/findus'
+import { MenuPage } from '../pages/menu/menu';
 
 
 
@@ -22,7 +22,8 @@ import  { FindusPage} from '../pages/findus/findus'
     BookingPage,
     HomePage,
     TabsPage,
-    FindusPage
+    FindusPage,
+    MenuPage
   ],
   imports: [
     BrowserModule,
@@ -35,12 +36,12 @@ import  { FindusPage} from '../pages/findus/findus'
     BookingPage,
     HomePage,
     TabsPage,
-    FindusPage
+    FindusPage,
+    MenuPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    GoogleMaps,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

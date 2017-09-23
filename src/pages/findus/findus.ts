@@ -1,33 +1,36 @@
-import { Component,ViewChild,ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import  { GoogleMaps,GoogleMap} from '@ionic-native/google-maps';
-
-/**
- * Generated class for the FindusPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
-
+ 
+declare var google;
+ 
 @Component({
-  selector: 'page-findus',
-  templateUrl: 'findus.html',
+  selector: 'findus-page',
+  templateUrl: 'findus.html'
 })
 export class FindusPage {
-	@ViewChild('map')mapElement: ElementRef;
-	map:GoogleMap;
-
-
-  constructor(public navCtrl: NavController,private _googleMaps:GoogleMaps) {
+ 
+  @ViewChild('map') mapElement: ElementRef;
+  map: any;
+ 
+  constructor(public navCtrl: NavController) {
+ 
   }
-  
-ngAfterViewInit(){
-	this.initMap();
+ 
+  ionViewDidLoad(){
+    this.loadMap();
+  }
 
-} 
-initMap(){
-	let element= this.mapElement.nativeElement;
-	this.map= this._googleMaps.create(element)
-}
+  loadMap(){
+ 
+    let latLng = new google.maps.LatLng(3.136984, 101.68744);
+ 
+    let mapOptions = {
+      center: latLng,
+      zoom: 15,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+ 
+    this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
+ 
+  }
 }
